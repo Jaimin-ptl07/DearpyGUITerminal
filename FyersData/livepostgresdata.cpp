@@ -4,7 +4,7 @@
 #include <chrono>
 
 // PostgreSQL Connection String
-const std::string DB_CONN = "dbname=NewsDatabase user=postgres password=jaimin07 host=localhost port=5432";
+const std::string DB_CONN = "dbname=DATABASENAME user=USERNAME password=YOUR_PWD host=localhost port=5432";
 
 // Function to create table if it doesn't exist
 void create_table_if_not_exists() {
