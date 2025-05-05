@@ -5,9 +5,9 @@ import time
 
 # PostgreSQL Connection Settings
 DB_CONFIG = {
-    "user": "postgres",
-    "password": "jaimin07",
-    "database": "NewsDatabase",
+    "user": "USERNAME",
+    "password": "YOUR_PWD",
+    "database": "DATABASE_NAME",
     "host": "localhost",
     "port": 5432
 }
