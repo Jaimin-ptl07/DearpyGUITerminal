@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Stock Data Client</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        #messages { margin-top: 20px; }
+        .message { padding: 5px; border-bottom: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>Real-Time Stock Data</h1>
+    <div id="messages"></div>
+
+    <script>
+        // Establish WebSocket connection
+        const socket = new WebSocket('ws://localhost:8765');
+
+        // Connection opened
+        socket.addEventListener('open', function (event) {
+            console.log('Connected to the WebSocket server');
+        });
+
+        // Listen for messages
+        socket.addEventListener('message', function (event) {
+            console.log('Message from server ', event.data);
+            displayMessage(event.data);
+        });
+
+        // Connection closed
+        socket.addEventListener('close', function (event) {
+            console.log('WebSocket connection closed: ', event);
+        });
+
+        // Handle errors
+        socket.addEventListener('error', function (event) {
+            console.error('WebSocket error: ', event);
+        });
+
+        // Display message on the webpage
+        function displayMessage(message) {
+            const messagesDiv = document.getElementById('messages');
+            const messageElement = document.createElement('div');
+            messageElement.className = 'message';
+            messageElement.textContent = message;
+            messagesDiv.appendChild(messageElement);
+        }
+    </script>
+</body>
+</html>
