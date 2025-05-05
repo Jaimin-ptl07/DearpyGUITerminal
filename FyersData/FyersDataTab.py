@@ -6,7 +6,7 @@ import random
 
 class FyersDataTab:
     def __init__(self):
-        self.client_id = "95INC3BKC2-100"
+        self.client_id = "FYERS_CLIENT_ID"
         self.modal = ModalNotification()  # Initialize modal notification
 
     def read_access_token(self):
