@@ -8,11 +8,11 @@ import requests
 from fyers_apiv3 import fyersModel
 
 
-totp_key = "F6IBCYTVPKQH3OGRFUUKPZL5JWQ3LMNR"
-username = "XB02507"
-pin = 1590
-client_id = "95INC3BKC2-100"
-secret_key = "PRC43GYKF8"
+totp_key = "USE_YOUR_TOTP_KEY"
+username = "USERNAME"
+pin = "PIN"
+client_id = "FYERS_CLIENT_ID"
+secret_key = "FYERS_SECRET_KEY"
 redirect_uri = "https://google.com"
 
 
